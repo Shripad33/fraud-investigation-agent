@@ -5,5 +5,4 @@ __pycache__/
 *.env
 .streamlit/secrets.toml
 
-data/transactions.csv
-outputs/transaction_index.json
+data/transactions_full_backup.csv
