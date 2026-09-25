@@ -3,7 +3,7 @@
   "case": {
     "status": "open",
     "verdict": "uncertain",
-    "fraud_probability": 0.82,
+    "fraud_probability": 0.8,
     "pattern": "account_takeover",
     "pattern_description": "Online activity shows multiple identity or behavioral anomalies consistent with a possible account-takeover scenario. These signals require verification and are not treated as proof by themselves.",
     "affected_txn_ids": [
@@ -57,7 +57,7 @@
         ]
       },
       {
-        "claim": "98 other customer(s) had activity in the same region within the analysis window.",
+        "claim": "3 other customer(s) had activity in the same region within the analysis window.",
         "source": "transaction index",
         "ref": "330.0",
         "entity_ids": [
@@ -73,7 +73,7 @@
         ]
       },
       {
-        "claim": "Temporary heuristic fraud probability is 0.820; this is not a calibrated machine-learning probability.",
+        "claim": "Temporary heuristic fraud probability is 0.800; this is not a calibrated machine-learning probability.",
         "source": "local decision engine",
         "ref": "3523199",
         "entity_ids": [
@@ -243,7 +243,7 @@
         "card_id": "C03278-K2"
       }
     ],
-    "summary": "Transaction 3523199 was investigated using customer history, identity/device evidence, prior cases, and cross-customer activity. The detected pattern is account_takeover. The temporary heuristic fraud probability is 0.820. The current recommendation follows R1, R1.",
+    "summary": "Transaction 3523199 was investigated using customer history, identity/device evidence, prior cases, and cross-customer activity. The detected pattern is account_takeover. The temporary heuristic fraud probability is 0.800. The current recommendation follows R1, R1.",
     "written_to_graph": false,
     "graph_case_id": ""
   },
@@ -304,5 +304,5 @@
     "total": 0,
     "note": "Local prototype; no LLM token accounting yet."
   },
-  "latency_s": 50.204
+  "latency_s": 3.885
 }

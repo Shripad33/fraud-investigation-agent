@@ -3,7 +3,7 @@
   "case": {
     "status": "open",
     "verdict": "uncertain",
-    "fraud_probability": 0.5,
+    "fraud_probability": 0.48,
     "pattern": "none",
     "pattern_description": "",
     "affected_txn_ids": [
@@ -39,7 +39,7 @@
         "entity_ids": []
       },
       {
-        "claim": "115 other customer(s) had activity in the same region within the analysis window.",
+        "claim": "3 other customer(s) had activity in the same region within the analysis window.",
         "source": "transaction index",
         "ref": "330.0",
         "entity_ids": [
@@ -55,7 +55,7 @@
         ]
       },
       {
-        "claim": "Temporary heuristic fraud probability is 0.500; this is not a calibrated machine-learning probability.",
+        "claim": "Temporary heuristic fraud probability is 0.480; this is not a calibrated machine-learning probability.",
         "source": "local decision engine",
         "ref": "3530164",
         "entity_ids": [
@@ -225,7 +225,7 @@
         "card_id": "C01109-K2"
       }
     ],
-    "summary": "Transaction 3530164 was investigated using customer history, identity/device evidence, prior cases, and cross-customer activity. The detected pattern is none. The temporary heuristic fraud probability is 0.500. The current recommendation follows R1, R1.",
+    "summary": "Transaction 3530164 was investigated using customer history, identity/device evidence, prior cases, and cross-customer activity. The detected pattern is none. The temporary heuristic fraud probability is 0.480. The current recommendation follows R1, R1.",
     "written_to_graph": false,
     "graph_case_id": ""
   },
@@ -286,5 +286,5 @@
     "total": 0,
     "note": "Local prototype; no LLM token accounting yet."
   },
-  "latency_s": 86.061
+  "latency_s": 3.951
 }

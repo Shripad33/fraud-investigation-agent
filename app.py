@@ -108,31 +108,56 @@ def load_case(case_id):
 
 
 def run_investigation(case_id):
-    command = [
-        sys.executable,
-        str(INVESTIGATE_SCRIPT),
-        "--case",
-        case_id,
-    ]
+    """Run the investigation engine, building the transaction index if needed."""
+    index_path = os.path.join(BASE_DIR, "outputs", "transaction_index.json")
 
     try:
+        # Build the transaction index if it is missing
+        if not os.path.exists(index_path):
+            build_result = subprocess.run(
+                [
+                    sys.executable,
+                    os.path.join(BASE_DIR, "scripts", "build_index.py"),
+                ],
+                cwd=BASE_DIR,
+                capture_output=True,
+                text=True,
+                timeout=120,
+            )
+
+            if build_result.returncode != 0:
+                return None, (
+                    "Could not build the transaction index.\n\n"
+                    + build_result.stdout
+                    + "\n"
+                    + build_result.stderr
+                )
+
+        # Run the investigation
         result = subprocess.run(
-            command,
-            cwd=str(BASE_DIR),
+            [
+                sys.executable,
+                os.path.join(BASE_DIR, "scripts", "investigate_case.py"),
+                "--case",
+                case_id,
+            ],
+            cwd=BASE_DIR,
             capture_output=True,
             text=True,
             timeout=180,
         )
 
         if result.returncode != 0:
-            return None, result.stderr
+            return None, result.stdout + "\n" + result.stderr
 
-        data = load_case(case_id)
+        # Load the generated case result
+        case_file = os.path.join(BASE_DIR, "cases", f"{case_id}.json")
 
-        if data is None:
-            return None, "Investigation completed but JSON output was not found."
+        if os.path.exists(case_file):
+            with open(case_file, "r", encoding="utf-8") as f:
+                return json.load(f), None
 
-        return data, None
+        return None, "Investigation completed but case output was not found."
 
     except subprocess.TimeoutExpired:
         return None, "Investigation timed out."

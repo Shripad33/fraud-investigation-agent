@@ -294,5 +294,5 @@
     "total": 0,
     "note": "Local prototype; no LLM token accounting yet."
   },
-  "latency_s": 23.258
+  "latency_s": 3.961
 }

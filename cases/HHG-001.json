@@ -39,14 +39,6 @@
         "entity_ids": []
       },
       {
-        "claim": "20 other customer(s) had activity in the same region within the analysis window.",
-        "source": "transaction index",
-        "ref": "444.0",
-        "entity_ids": [
-          "3514030"
-        ]
-      },
-      {
         "claim": "Detected investigation pattern: none.",
         "source": "local decision engine",
         "ref": "none",
@@ -286,5 +278,5 @@
     "total": 0,
     "note": "Local prototype; no LLM token accounting yet."
   },
-  "latency_s": 55.746
+  "latency_s": 3.428
 }
