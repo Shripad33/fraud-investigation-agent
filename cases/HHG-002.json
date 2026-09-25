@@ -1,0 +1,290 @@
+{
+  "case_id": "HHG-002",
+  "case": {
+    "status": "closed_fraud",
+    "verdict": "fraud",
+    "fraud_probability": 0.94,
+    "pattern": "card_not_present_fraud",
+    "pattern_description": "Online activity shows an unusual amount or burst pattern consistent with possible card-not-present fraud.",
+    "affected_txn_ids": [
+      "3478782"
+    ],
+    "first_suspicious_txn_id": "3478782",
+    "connected_card_ids": [
+      "C11891-K1"
+    ],
+    "connected_device_profiles": [],
+    "exposure_usd": 0.0,
+    "evidence": [
+      {
+        "claim": "Transaction 3478782 has a risk score of 0.79.",
+        "source": "transactions.csv",
+        "ref": "3478782",
+        "entity_ids": [
+          "3478782"
+        ]
+      },
+      {
+        "claim": "The flagged transaction's region is present in the customer's historical activity.",
+        "source": "customer transaction history",
+        "ref": "",
+        "entity_ids": [
+          "3478782"
+        ]
+      },
+      {
+        "claim": "The transaction amount is unusually high or low relative to this customer's historical amounts.",
+        "source": "customer transaction history",
+        "ref": "3478782",
+        "entity_ids": [
+          "3478782"
+        ]
+      },
+      {
+        "claim": "The available history contains 1 prior confirmed-fraud case(s).",
+        "source": "closed_cases_history.csv",
+        "ref": "prior_cases",
+        "entity_ids": []
+      },
+      {
+        "claim": "Detected investigation pattern: card_not_present_fraud.",
+        "source": "local decision engine",
+        "ref": "card_not_present_fraud",
+        "entity_ids": [
+          "3478782"
+        ]
+      },
+      {
+        "claim": "Temporary heuristic fraud probability is 0.940; this is not a calibrated machine-learning probability.",
+        "source": "local decision engine",
+        "ref": "3478782",
+        "entity_ids": [
+          "3478782"
+        ]
+      }
+    ],
+    "similar_prior_cases": [
+      {
+        "case_id": "CC-4160",
+        "relevance_score": 180,
+        "status": "confirmed_fraud",
+        "pattern": "card_not_present_fraud",
+        "customer_id": "C11891",
+        "card_id": "C11891-K1"
+      },
+      {
+        "case_id": "CC-5565",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "out_of_region_use",
+        "customer_id": "C03474",
+        "card_id": "C03474-K1"
+      },
+      {
+        "case_id": "CC-5557",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "card_not_present_fraud",
+        "customer_id": "C07612",
+        "card_id": "C07612-K1"
+      },
+      {
+        "case_id": "CC-5550",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "card_not_present_fraud",
+        "customer_id": "C00866",
+        "card_id": "C00866-K1"
+      },
+      {
+        "case_id": "CC-5534",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "out_of_region_use",
+        "customer_id": "C08746",
+        "card_id": "C08746-K1"
+      },
+      {
+        "case_id": "CC-5530",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "account_takeover",
+        "customer_id": "C04172",
+        "card_id": "C04172-K2"
+      },
+      {
+        "case_id": "CC-5510",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "out_of_region_use",
+        "customer_id": "C03645",
+        "card_id": "C03645-K1"
+      },
+      {
+        "case_id": "CC-5509",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "account_takeover",
+        "customer_id": "C12166",
+        "card_id": "C12166-K2"
+      },
+      {
+        "case_id": "CC-5495",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "account_takeover",
+        "customer_id": "C12690",
+        "card_id": "C12690-K2"
+      },
+      {
+        "case_id": "CC-5484",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "card_not_present_fraud",
+        "customer_id": "C00583",
+        "card_id": "C00583-K1"
+      },
+      {
+        "case_id": "CC-5470",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "card_not_present_fraud",
+        "customer_id": "C13440",
+        "card_id": "C13440-K2"
+      },
+      {
+        "case_id": "CC-5461",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "card_not_present_fraud",
+        "customer_id": "C00294",
+        "card_id": "C00294-K2"
+      },
+      {
+        "case_id": "CC-5460",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "card_not_present_new_device",
+        "customer_id": "C09445",
+        "card_id": "C09445-K1"
+      },
+      {
+        "case_id": "CC-5449",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "card_not_present_new_device",
+        "customer_id": "C10855",
+        "card_id": "C10855-K1"
+      },
+      {
+        "case_id": "CC-5446",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "card_not_present_new_device",
+        "customer_id": "C08412",
+        "card_id": "C08412-K1"
+      },
+      {
+        "case_id": "CC-5443",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "out_of_region_use",
+        "customer_id": "C02502",
+        "card_id": "C02502-K2"
+      },
+      {
+        "case_id": "CC-5437",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "out_of_region_use",
+        "customer_id": "C12094",
+        "card_id": "C12094-K2"
+      },
+      {
+        "case_id": "CC-5436",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "out_of_region_use",
+        "customer_id": "C12525",
+        "card_id": "C12525-K1"
+      },
+      {
+        "case_id": "CC-5391",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "account_takeover",
+        "customer_id": "C06962",
+        "card_id": "C06962-K2"
+      },
+      {
+        "case_id": "CC-5387",
+        "relevance_score": 20,
+        "status": "confirmed_fraud",
+        "pattern": "out_of_region_use",
+        "customer_id": "C01966",
+        "card_id": "C01966-K1"
+      }
+    ],
+    "summary": "Transaction 3478782 was investigated using customer history, identity/device evidence, prior cases, and cross-customer activity. The detected pattern is card_not_present_fraud. The temporary heuristic fraud probability is 0.940. The current recommendation follows R1, R1.",
+    "written_to_graph": false,
+    "graph_case_id": ""
+  },
+  "evidence_requests": [
+    {
+      "type": "customer_validation",
+      "status": "requested",
+      "assumption": "No customer response is available in the local prototype, so customer validation is simulated as pending."
+    }
+  ],
+  "next_best_actions": {
+    "primary_action": "STEP_UP_AUTH",
+    "actions": [
+      {
+        "action": "STEP_UP_AUTH",
+        "approval": "auto",
+        "rule": "R1",
+        "reason": "Additional authentication is appropriate before stronger action."
+      },
+      {
+        "action": "CREATE_CASE",
+        "approval": "auto",
+        "rule": "R1",
+        "reason": "Elevated fraud signal requires investigation tracking."
+      }
+    ],
+    "rules": [
+      "R1"
+    ],
+    "approval_required": false
+  },
+  "sar": {
+    "required": false,
+    "reason": "Fraud is strongly suspected, but the available evidence does not meet an additional SAR reporting condition such as exposure above $1,000, shared origin, other-customer fraud, or coordinated abuse.",
+    "narrative": "",
+    "subjects": [],
+    "total_amount_usd": 0,
+    "activity_dates": []
+  },
+  "stop_reason": "Fraud probability reached the strong-evidence threshold with at least two independent supporting signals.",
+  "tool_calls": [
+    {
+      "tool": "transaction_index",
+      "purpose": "Retrieve flagged and customer transaction history."
+    },
+    {
+      "tool": "identity.csv",
+      "purpose": "Retrieve identity and device evidence."
+    },
+    {
+      "tool": "closed_cases_history.csv",
+      "purpose": "Retrieve previous fraud/legitimate case evidence."
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "total": 0,
+    "note": "Local prototype; no LLM token accounting yet."
+  },
+  "latency_s": 26.13
+}

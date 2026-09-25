@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+*.env
+.streamlit/secrets.toml
+
+data/transactions.csv
+outputs/transaction_index.json
